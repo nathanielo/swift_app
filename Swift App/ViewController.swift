@@ -17,16 +17,21 @@ class ViewController: UIViewController {
        
         }
 
-    var tapCount = 0
+    @IBOutlet weak var Text1: UITextField!
+    
+    
+    @IBOutlet weak var Text2: UITextField!
+    
+
     
     @IBAction func buttonTapped(_ sender: Any) {
-        tapCount = tapCount + 1
-        if tapCount >= 17 { theLabel.text = "You tapped the button 17 times"
+        theLabel.text = "Answer is \(Double(Text1.text!)! + Double(Text2.text!)!)"
+        
     }
    
    
     
-        func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -34,4 +39,4 @@ class ViewController: UIViewController {
 
 }
 
-}
+
